@@ -7,12 +7,14 @@ interface ProfileProps {
 export function Profile ({showProfileDAta = true}: ProfileProps) {
     return (
         <Flex align="center">
-          <Box mr="4" textAlign="right">
-            <Text>Thiago Silva</Text>
-            <Text color="gray.300" fontSize="small">
-              thiagott380@gmail.com
-            </Text>
-          </Box>
+          { showProfileDAta && (
+               <Box mr="4" textAlign="right">
+               <Text>Thiago Silva</Text>
+               <Text color="gray.300" fontSize="small">
+                 thiagott380@gmail.com
+               </Text>
+             </Box>
+          )}
 
           <Avatar
             size="md"
